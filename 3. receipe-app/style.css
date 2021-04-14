@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,400;1,300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mobile-container {
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 3px 3px #3333331a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+header {
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > input {
+  font-family: inherit;
+  background-color: #eee;
+  border-radius: 3px;
+  border: none;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+header > button {
+  background-color: transparent;
+  border: none;
+  margin: -25px;
+}
+
+header > button:active {
+  color: gray;
+}
+
+.fav-container {
+  padding: 1rem;
+  text-align: center;
+
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.fav-meals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  list-style: none;
+
+  overflow: scroll;
+}
+
+.fav-meals li {
+  width: 85px;
+  position: relative;
+}
+
+.fav-meals li .clear {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+.fav-meals li:hover .clear {
+  opacity: 1;
+}
+
+.fav-meals li img {
+  width: 75px;
+  height: 75px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 10px 2px #0000001a;
+  border: 0.1px solid white;
+}
+
+.fav-meals > li > span {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.meals {
+  min-width: 100%;
+}
+
+.meal {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden !important;
+  box-shadow: 0 0 5px 1px #0000001a;
+}
+
+.meal-header {
+}
+
+.meal-header > .random {
+  position: absolute;
+  color: inherit;
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+  margin: 10px 0 0 0;
+  padding: 5px 20px 5px 20px;
+  box-shadow: 0 0 0 0px;
+}
+
+.meal-header > img {
+  border-radius: 5px 5px 0 0;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.meal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.meal-body > h4 {
+  margin: 0;
+}
+
+.meal-body > .fav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: gray;
+}
+
+.meal-body > .fav-btn.active {
+  color: rebeccapurple;
+}
