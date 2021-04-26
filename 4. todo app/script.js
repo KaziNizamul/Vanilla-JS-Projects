@@ -15,7 +15,7 @@ if (todos) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  addTodo();
+  addTodo(); 
 });
 
 
